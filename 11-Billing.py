@@ -1,0 +1,31 @@
+import tkinter as tk
+from tkinter import *
+from tkinter import  messagebox
+def hello1():
+ msg = messagebox.showinfo( "Confirmation","Submitted Sucessfully")
+root=tk.Tk()
+root.title('Billing')
+root.geometry('270x270')
+l1=tk.Label(root,text="Name")
+l1.grid(row=0)
+t1=tk.Entry(root)
+t1.grid(row=0,column=1)
+l2=tk.Label(root,text="Bill No",)
+l2.grid(row=1)
+t2=tk.Entry(root)
+t2.grid(row=1,column=1)
+l4 = tk.Label(root,text='Products',)  # added one Label
+l4.grid(row=2,column=0)
+t4 = tk.Text(root,height=4,width=15)
+t4.grid(row=2,column=1)
+l3=tk.Label(root,text="Quantity")
+l3.grid(row=3)
+t3=tk.Entry(root)
+t3.grid(row=3,column=1)
+t5 = tk.Text(root,height=4,width=15)
+t5.grid(row=4,column=1)
+b1=tk.Button(root, text='Clear Items',command=hello1)
+b1.grid(sticky='s',row=6,column=0)
+b2=tk.Button(root, text='Total',command=hello1)
+b2.grid(sticky='s',row=6,column=1)
+root.mainloop()
